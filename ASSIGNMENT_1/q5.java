@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 public class q5 { 
 public static int sum_Of_Digits(int n) {
 	int sum=0;
