@@ -10,26 +10,27 @@ Sample Run:
 Enter a number 9294
 Sum of digits of 9294 until the number is a single digit is 6*/
 import java.util.Scanner;
-public class q5 { 
-public static int sum_Of_Digits(int n) {
-	int sum=0;
-	while(n>0 || sum>9 ) {
-		if(n == 0) {
-			n = sum;
-			sum=0;
-		}
-		int rem=n%10;
-		sum=sum+rem;
-		n=n/10;
-	}
-	return sum;
-}
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter a no");
-		int n=sc.nextInt();
-		System.out.println("sum of digit is until the no is single digit:"+ sum_Of_Digits(n));
 
-	}
+public class q5 {
+    public static int sum_of_digits(int n) {
+        int sum = 0;
+        while (n > 0) {
+            int rem = n % 10;
+            sum = sum + rem;
+            n = n / 10;
+        }
+        if (sum >= 10)
+            return sum_of_digits(sum);
 
-}
+        else {
+            return sum;
+        }
+    }
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter a no");
+            int x=sc.nextInt();
+            System.out.print("sum of digit until the no is single digit is "+sum_of_digits(x));
+        }
+
+    }
