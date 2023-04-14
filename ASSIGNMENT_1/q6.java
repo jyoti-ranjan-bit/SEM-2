@@ -9,26 +9,19 @@ Enter a number 37
 37 is odd: true*/
 
 import java.util.Scanner;
+
 public class q6 {
-	public static boolean isOdd(int n) {
-		boolean odd=false;
-		for(int i=1;i<=n;i++) {
-			odd=!odd;
-		}
-		return odd;
-	}
+    public static boolean isOdd(int n){
+        boolean odd=false;
+        for(int i=0;i<n;i++){
+            odd=!odd;
+        }
+        return odd;
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n= sc.nextInt();
+        System.out.println(n+" is odd: "+isOdd(n));
 
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("enter a no: ");
-		int n=sc.nextInt();
-		if(isOdd(n)) {
-			System.out.println("odd");
-		}
-		else {
-			System.out.println("even");
-		}
-
-	}
-
+    }
 }
